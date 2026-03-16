@@ -1,6 +1,8 @@
 package com.healthgov.model;
 
-import com.healthgov.enums.InfrastructureType;
+import java.time.LocalDate;
+
+import com.healthgov.enums.GrantStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -14,19 +16,22 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Infrastructure {
+public class Grants {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long infraId;
+    private Long grantId;
  
     @ManyToOne
-    @JoinColumn(name = "programId")
-    private HealthProgram program;
+    @JoinColumn(name = "projectId")
+    private ResearchProject project;
  
-    @Enumerated(EnumType.STRING)
-    private InfrastructureType type;
+    @ManyToOne
+    @JoinColumn(name = "researcherId")
+    private Users researcher;
+ 
+    private Double amount;
+    private LocalDate date;
     
-    private String location;
-    private Integer capacity;
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private GrantStatus status;
 }
