@@ -1,5 +1,7 @@
 package com.healthgov.dto;
 
+import com.healthgov.model.Role;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -17,9 +19,7 @@ public class UserDto {
     @Size(max = 100, message = "Name cannot exceed 100 characters")
     private String name;
 
-    // Assuming role is actually an ENUM in your system
-    @NotNull(message = "Role cannot be null")
-    private String role;
+    private Role role;
 
     @Email(message = "Invalid email format")
     @NotBlank(message = "Email cannot be blank")
