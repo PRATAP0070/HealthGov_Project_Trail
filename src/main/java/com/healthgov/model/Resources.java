@@ -1,8 +1,10 @@
 package com.healthgov.model;
 
-import java.util.Date;
+import com.healthgov.enums.ResourceType;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,17 +14,17 @@ import lombok.Data;
 
 @Entity
 @Data
-public class CitizenDocument {
+public class Resources {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long documentId;
+	private Long resourceId;
 
 	@ManyToOne
-	@JoinColumn(name = "citizenId") // recheck
-	private Citizen citizen;
+	@JoinColumn(name = "programId")
+	private HealthProgram program;
 
-	private String docType;
-	private String fileURI;
-	private Date uploadedDate;
-	private String verificationStatus;
+	@Enumerated(EnumType.STRING)
+    private ResourceType type;
+	private Integer quantity;
+	private String status;
 }
