@@ -1,5 +1,8 @@
 package com.healthgov.service;
 
-public interface ForgetPasswordService {
 
+import com.healthgov.dto.ForgetPasswordDto;
+
+public interface ForgetPasswordService {
+    String resetPassword(ForgetPasswordDto dto);
 }

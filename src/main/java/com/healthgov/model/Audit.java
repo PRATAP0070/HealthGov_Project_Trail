@@ -15,8 +15,8 @@ public class Audit {
     private Long auditId;
  
     @ManyToOne
-    @JoinColumn(name = "officerId")
-    private User officer;
+    @JoinColumn(name = "userId")
+    private User userId;
  
     private String scope;
     private String findings;
