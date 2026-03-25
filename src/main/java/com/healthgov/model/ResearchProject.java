@@ -1,13 +1,4 @@
 package com.healthgov.model;
-
-<<<<<<< HEAD
-
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
-
-import jakarta.persistence.Entity;
-=======
 import java.time.LocalDate;
 import java.util.List;
 
@@ -16,17 +7,16 @@ import com.healthgov.enums.ProjectStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
->>>>>>> origin/vikki
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import lombok.AllArgsConstructor;
+import com.healthgov.enums.ProjectStatus;
+import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+import java.time.LocalDate;
+import java.util.List;
+
 
 @Entity
 @Getter
@@ -34,27 +24,30 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ResearchProject {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long projectId;
-	private String title;
-	private String description;
 
-	@ManyToOne
-	@JoinColumn(name = "researcherId", nullable = false)
-	private Users researcher;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long projectId;
 
-	private LocalDate startDate;
-	private LocalDate endDate;
+    private String title;
+    private String description;
 
-	@Enumerated(EnumType.STRING)
-	private ProjectStatus status;
+    @ManyToOne
+    @JoinColumn(name = "researcherId", nullable = false)
+    private Users researcher;
 
-	private String reason;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
-	@OneToMany(mappedBy = "project")
-	private List<GrantApplication> grantApplications;
+    @Enumerated(EnumType.STRING)
+    private ProjectStatus status;   
 
-	@OneToMany(mappedBy = "project")
-	private List<Grants> grants;
+    private String reason;          
+
+    @OneToMany(mappedBy = "project")
+    private List<GrantApplication> grantApplications;
+
+    @OneToOne(mappedBy = "project", cascade = CascadeType.ALL)
+    private Grants grant;
+
 }

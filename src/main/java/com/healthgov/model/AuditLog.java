@@ -1,35 +1,44 @@
 package com.healthgov.model;
 
-import java.util.Date;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Table(
+    name = "audit_log",
+    indexes = {
+        @Index(name = "idx_auditlog_user", columnList = "user_id"),
+        @Index(name = "idx_auditlog_timestamp", columnList = "timestamp")
+    }
+)
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class AuditLog {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long auditId;
 
-	@ManyToOne
-	@JoinColumn(name = "userId", nullable = false)
-	private Users user;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long auditId;
 
-	@NotBlank(message = "Action is mandatory")
-	private String action;
+    @ManyToOne(optional = false)
+    @JoinColumn(
+        name = "user_id",
+        nullable = false,
+        foreignKey = @ForeignKey(name = "fk_auditlog_user")
+    )
+    private Users user;
 
-	@NotBlank(message = "Resource is mandatory")
-	private String resource;
+    @NotBlank
+    private String action;   // PROJECT_CREATED, PROJECT_APPROVED...
 
-	@NotNull(message = "Timestamp is mandatory")
-	private Date timestamp;
+    @NotBlank
+    private String resource; // PROJECT / GRANT / APPLICATION
+
+    @NotNull
+    private LocalDateTime timestamp;
 }
+

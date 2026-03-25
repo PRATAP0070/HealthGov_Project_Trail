@@ -1,5 +1,5 @@
 package com.healthgov.enums;
 
 public enum ProjectStatus {
-	 PENDING, APPROVED,REJECTED
+    PENDING, APPROVED, REJECTED
 }

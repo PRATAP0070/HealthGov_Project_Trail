@@ -13,35 +13,41 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import java.time.LocalDateTime;
+
+import com.healthgov.enums.GrantStatus;
+
+import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Setter
 @Getter
-@AllArgsConstructor
+@Setter
 @NoArgsConstructor
-
+@AllArgsConstructor
 public class Grants {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long grantId;
 
-	@ManyToOne(optional = false)
-	@JoinColumn(name = "project_Id", nullable = false)
-	private ResearchProject project;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long grantId;
 
-	@ManyToOne(optional = false)
-	@JoinColumn(name = "researcher_Id", nullable = false)
-	private Users researcher;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "project_id", nullable = false, unique = true)
+    private ResearchProject project;
 
-	private Double amount;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "researcher_id", nullable = false)
+    private Users researcher;
 
-	@Column(name = "granted_at")
-	private LocalDate date;
+    private Double amount;   
 
-	@Enumerated(EnumType.STRING)
-	private GrantStatus status;
+    @Column(name = "granted_at", nullable = false)
+    private LocalDateTime date;
+
+    @Enumerated(EnumType.STRING)
+    private GrantStatus status; 
 }
