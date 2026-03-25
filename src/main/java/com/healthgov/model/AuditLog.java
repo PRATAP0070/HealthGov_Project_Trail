@@ -1,23 +1,17 @@
 package com.healthgov.model;
 
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import java.time.LocalDateTime;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.Data;
 
 @Entity
-@Table(
-    name = "audit_log",
-    indexes = {
-        @Index(name = "idx_auditlog_user", columnList = "user_id"),
-        @Index(name = "idx_auditlog_timestamp", columnList = "timestamp")
-    }
-)
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Data
 public class AuditLog {
 
     @Id

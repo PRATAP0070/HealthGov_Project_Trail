@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 import com.healthgov.enums.ComplianceResult;
 import com.healthgov.enums.ComplianceType;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

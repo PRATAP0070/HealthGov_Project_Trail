@@ -39,6 +39,10 @@ public class Users {
     @NotBlank(message = "Phone number is mandatory")
     private String phone;
 
+    @Column(nullable = false)
+	@JsonIgnore
+	private String password;
+
     @NotNull(message = "Status is required")
     @Enumerated(EnumType.STRING)
     private UserStatus status;  // ACTIVE, INACTIVE, SUSPENDED
