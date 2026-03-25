@@ -1,4 +1,4 @@
-package com.healthgov.enums;
+package com.healthgov.model;
 
 public enum InfrastructureType {
 	HOSPITAL, LAB, CENTER

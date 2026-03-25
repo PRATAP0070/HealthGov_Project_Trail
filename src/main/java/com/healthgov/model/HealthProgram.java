@@ -3,21 +3,21 @@ package com.healthgov.model;
 import java.sql.Date;
 import java.util.List;
 
-import com.healthgov.enums.ProgramStatus;
-
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import lombok.Data;
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Data
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class HealthProgram {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,18 +27,14 @@ public class HealthProgram {
     private Date startDate;
     private Date endDate;
     private Double budget;
-    @Enumerated(EnumType.STRING)
-    private ProgramStatus status;
+    private String status;
  
     @OneToMany(mappedBy = "program")
     private List<Enrollment> enrollments;
  
     @OneToMany(mappedBy = "program")
-    private List<Resources> resources;
+    private List<Resource> resources;
  
     @OneToMany(mappedBy = "program")
     private List<Infrastructure> infrastructures;
-    
-    
 }
-

@@ -1,5 +1,6 @@
 package com.healthgov.model;
 
+
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -62,3 +63,4 @@ public class Report {
 		this.generatedDate = generatedDate;
 	}
 }
+

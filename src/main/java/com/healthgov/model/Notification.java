@@ -35,4 +35,5 @@ public class Notification {
 
 	    private String status;
 	    private LocalDateTime createdDate;
+
 }
