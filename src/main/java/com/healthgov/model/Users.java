@@ -46,7 +46,11 @@ public class Users {
     private String status;
  
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+<<<<<<< HEAD
     private List<AuditLog> auditLogs = new ArrayList<>();;
+=======
+    private List<AuditLog> auditLogs = new ArrayList<>();
+>>>>>>> origin/vikki
  
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Notification> notifications = new ArrayList<>();
