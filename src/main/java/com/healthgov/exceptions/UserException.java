@@ -1,5 +1,6 @@
 package com.healthgov.exceptions;
 
+<<<<<<< HEAD
 public class UserException extends Exception{
 
 	
@@ -8,4 +9,8 @@ public class UserException extends Exception{
 	public UserException(String message) {
 		super(message);
 	}
+=======
+public class UserException {
+
+>>>>>>> origin/Prushottamverma
 }

@@ -1,5 +1,6 @@
 package com.healthgov.dto;
 
+<<<<<<< HEAD
 import java.util.Date;
 
 import lombok.Data;
@@ -12,3 +13,8 @@ public class AuditLogDto {
     private String resource;
     private Date timestamp;
 }
+=======
+public class AuditLogDto {
+
+}
+>>>>>>> origin/Prushottamverma
