@@ -1,0 +1,115 @@
+2026-03-25T09:21:30.358+05:30  INFO 18084 --- [Health_Gov] [restartedMain] com.healthgov.HealthGovApplication       : Starting HealthGovApplication using Java 21.0.8 with PID 18084 (C:\JAVA FULL STACK\New_Project_Structure\Project-HealthGov---National-Public-Health-Research-Governance-System-main\target\classes started by 2481703 in C:\JAVA FULL STACK\New_Project_Structure\Project-HealthGov---National-Public-Health-Research-Governance-System-main)
+2026-03-25T09:21:30.377+05:30  INFO 18084 --- [Health_Gov] [restartedMain] com.healthgov.HealthGovApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T09:21:30.510+05:30  INFO 18084 --- [Health_Gov] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T09:21:30.512+05:30  INFO 18084 --- [Health_Gov] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T09:21:33.929+05:30  INFO 18084 --- [Health_Gov] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25T09:21:34.042+05:30  INFO 18084 --- [Health_Gov] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 3 JPA repository interfaces.
+2026-03-25T09:21:35.091+05:30  INFO 18084 --- [Health_Gov] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 1234 (http)
+2026-03-25T09:21:35.114+05:30  INFO 18084 --- [Health_Gov] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T09:21:35.115+05:30  INFO 18084 --- [Health_Gov] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T09:21:35.229+05:30  INFO 18084 --- [Health_Gov] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4716 ms
+2026-03-25T09:21:35.711+05:30  INFO 18084 --- [Health_Gov] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-25T09:21:35.842+05:30  INFO 18084 --- [Health_Gov] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-25T09:21:36.951+05:30  INFO 18084 --- [Health_Gov] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25T09:21:37.059+05:30  INFO 18084 --- [Health_Gov] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-25T09:21:37.891+05:30  INFO 18084 --- [Health_Gov] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e22e0eb
+2026-03-25T09:21:37.895+05:30  INFO 18084 --- [Health_Gov] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-25T09:21:38.087+05:30  INFO 18084 --- [Health_Gov] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Health_Gov_New]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: Health_Gov_New/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-25T09:21:40.601+05:30  INFO 18084 --- [Health_Gov] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25T09:21:40.888+05:30  INFO 18084 --- [Health_Gov] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T09:21:41.065+05:30  INFO 18084 --- [Health_Gov] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-25T09:21:42.819+05:30  WARN 18084 --- [Health_Gov] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25T09:21:43.839+05:30  INFO 18084 --- [Health_Gov] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-03-25T09:21:44.054+05:30  INFO 18084 --- [Health_Gov] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 1234 (http) with context path '/'
+2026-03-25T09:21:44.067+05:30  INFO 18084 --- [Health_Gov] [restartedMain] com.healthgov.HealthGovApplication       : Started HealthGovApplication in 14.566 seconds (process running for 16.333)
+2026-03-25T09:21:44.076+05:30  WARN 18084 --- [Health_Gov] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-25T09:21:44.076+05:30  WARN 18084 --- [Health_Gov] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-25T09:21:45.158+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-25T09:21:45.158+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-25T09:21:45.161+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-25T09:37:59.006+05:30  WARN 18084 --- [Health_Gov] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m20s984ms323µs600ns).
+2026-03-25T09:48:56.002+05:30  WARN 18084 --- [Health_Gov] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m56s995ms192µs100ns).
+2026-03-25T09:57:02.739+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(31)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-25T09:57:02.743+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(31)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T09:57:02.759+05:30  INFO 18084 --- [Health_Gov] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T09:57:02.769+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(31)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T09:57:02.772+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-25T09:57:02.780+05:30  INFO 18084 --- [Health_Gov] [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-25T09:57:34.072+05:30  INFO 16636 --- [Health_Gov] [restartedMain] com.healthgov.HealthGovApplication       : Starting HealthGovApplication using Java 21.0.8 with PID 16636 (C:\JAVA FULL STACK\New_Project_Structure\Project-HealthGov---National-Public-Health-Research-Governance-System-main\target\classes started by 2481703 in C:\JAVA FULL STACK\New_Project_Structure\Project-HealthGov---National-Public-Health-Research-Governance-System-main)
+2026-03-25T09:57:34.075+05:30  INFO 16636 --- [Health_Gov] [restartedMain] com.healthgov.HealthGovApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T09:57:34.145+05:30  INFO 16636 --- [Health_Gov] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T09:57:34.145+05:30  INFO 16636 --- [Health_Gov] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T09:57:36.370+05:30  INFO 16636 --- [Health_Gov] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25T09:57:36.426+05:30  INFO 16636 --- [Health_Gov] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2026-03-25T09:57:36.971+05:30  INFO 16636 --- [Health_Gov] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 1234 (http)
+2026-03-25T09:57:36.983+05:30  INFO 16636 --- [Health_Gov] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T09:57:36.983+05:30  INFO 16636 --- [Health_Gov] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T09:57:37.030+05:30  INFO 16636 --- [Health_Gov] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2884 ms
+2026-03-25T09:57:37.247+05:30  INFO 16636 --- [Health_Gov] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-25T09:57:37.289+05:30  INFO 16636 --- [Health_Gov] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-25T09:57:37.692+05:30  INFO 16636 --- [Health_Gov] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25T09:57:37.721+05:30  INFO 16636 --- [Health_Gov] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-25T09:57:38.158+05:30  INFO 16636 --- [Health_Gov] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17cecb73
+2026-03-25T09:57:38.160+05:30  INFO 16636 --- [Health_Gov] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-25T09:57:38.245+05:30  INFO 16636 --- [Health_Gov] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Health_Gov_New]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: Health_Gov_New/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-25T09:57:39.432+05:30  INFO 16636 --- [Health_Gov] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25T09:57:39.561+05:30  INFO 16636 --- [Health_Gov] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T09:57:39.638+05:30  INFO 16636 --- [Health_Gov] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-25T09:57:40.456+05:30  WARN 16636 --- [Health_Gov] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25T09:57:41.178+05:30  INFO 16636 --- [Health_Gov] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-03-25T09:57:41.402+05:30  INFO 16636 --- [Health_Gov] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 1234 (http) with context path '/'
+2026-03-25T09:57:41.410+05:30  INFO 16636 --- [Health_Gov] [restartedMain] com.healthgov.HealthGovApplication       : Started HealthGovApplication in 7.871 seconds (process running for 9.12)
+2026-03-25T09:57:41.415+05:30  WARN 16636 --- [Health_Gov] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-25T09:57:41.416+05:30  WARN 16636 --- [Health_Gov] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-25T09:57:41.903+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-25T09:57:41.903+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-25T09:57:41.905+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-25T09:59:29.460+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-2] c.h.c.ResearchProjectController          : Fetching project list with status=null
+2026-03-25T09:59:29.490+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-2] c.h.service.ResearchProjectServiceImpl   : Fetching project list with status=null
+2026-03-25T09:59:30.224+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-2] c.h.service.ResearchProjectServiceImpl   : Fetched ALL projects -> count=15
+2026-03-25T09:59:30.256+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-2] c.h.c.ResearchProjectController          : Projects fetched: count=15, filterStatus=null
+2026-03-25T09:59:44.003+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-4] c.h.c.ResearchProjectController          : Fetching project list with status=APPROVED
+2026-03-25T09:59:44.009+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-4] c.h.service.ResearchProjectServiceImpl   : Fetching project list with status=APPROVED
+2026-03-25T09:59:44.240+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-4] c.h.service.ResearchProjectServiceImpl   : Projects fetched by status APPROVED -> count=10
+2026-03-25T09:59:44.242+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-4] c.h.c.ResearchProjectController          : Projects fetched: count=10, filterStatus=APPROVED
+2026-03-25T09:59:50.203+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-5] c.h.c.ResearchProjectController          : Fetching project by ID=2
+2026-03-25T09:59:50.216+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-5] c.h.service.ResearchProjectServiceImpl   : Fetching project details for projectId=2
+2026-03-25T09:59:50.249+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-5] c.h.service.ResearchProjectServiceImpl   : Project fetched successfully: projectId=2
+2026-03-25T09:59:50.255+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-5] c.h.c.ResearchProjectController          : Project fetched successfully: projectId=2
+2026-03-25T09:59:59.762+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-6] c.h.c.ProgramManagerReviewController     : Fetching all PENDING projects for Program Manager review.
+2026-03-25T09:59:59.769+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-6] c.h.s.ProgramManagerReviewServiceImpl    : Fetching ALL PENDING projects for PM dashboard.
+2026-03-25T09:59:59.778+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-6] c.h.s.ProgramManagerReviewServiceImpl    : Total pending projects found: 0
+2026-03-25T10:00:03.908+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-1] c.h.c.ProgramManagerReviewController     : Fetching projects with status=APPROVED
+2026-03-25T10:00:03.916+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-1] c.h.s.ProgramManagerReviewServiceImpl    : Fetching projects with status=APPROVED
+2026-03-25T10:00:03.980+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-1] c.h.s.ProgramManagerReviewServiceImpl    : Projects found with status APPROVED: 10
+2026-03-25T10:00:11.583+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-7] c.h.c.ProgramManagerReviewController     : Fetching project details for projectId=19
+2026-03-25T10:00:11.587+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-7] c.h.s.ProgramManagerReviewServiceImpl    : Fetching project for PM review: projectId=19
+2026-03-25T10:00:11.595+05:30  INFO 16636 --- [Health_Gov] [http-nio-1234-exec-7] c.h.s.ProgramManagerReviewServiceImpl    : Project fetched successfully: projectId=19
+2026-03-25T10:01:09.908+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-25T10:01:09.911+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(15)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T10:01:09.927+05:30  INFO 16636 --- [Health_Gov] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T10:01:09.935+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(15)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T10:01:09.939+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-25T10:01:09.946+05:30  INFO 16636 --- [Health_Gov] [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
