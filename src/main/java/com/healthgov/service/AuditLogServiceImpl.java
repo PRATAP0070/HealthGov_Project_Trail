@@ -11,6 +11,7 @@ import com.healthgov.dto.AuditLogDto;
 import com.healthgov.model.AuditLog;
 import com.healthgov.repository.AuditLogRepo;
 import com.healthgov.repository.RegistrationRepo;
+import java.time.LocalDateTime;
 
 
 @Service
@@ -30,7 +31,7 @@ public class AuditLogServiceImpl implements AuditLogService {
 		auditLog.setUser(registrationRepo.findById(dto.getUserId()).get());
 		auditLog.setResource(resource);
 		auditLog.setAction(status);
-		auditLog.setTimestamp(new Date());
+		auditLog.setTimestamp(LocalDateTime.now());
 		
 		auditLogRepo.save(auditLog);
 	}

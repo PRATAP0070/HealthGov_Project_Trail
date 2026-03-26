@@ -5,7 +5,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.healthgov.dto.ForgetPasswordDto;
-import com.healthgov.model.User;
+import com.healthgov.model.Users;
 import com.healthgov.repository.LoginRepo;
 import com.healthgov.repository.RegistrationRepo;
 
@@ -24,7 +24,7 @@ public class ForgetPasswordImpl implements ForgetPasswordService {
 	@Override
 	public String resetPassword(ForgetPasswordDto dto) {
 		
-		User user = loginRepo.findByName(dto.getName());
+		Users user = loginRepo.findByName(dto.getName());
 
 		if (user == null) {
 			throw new RuntimeException("User not found with email: " + dto.getName());

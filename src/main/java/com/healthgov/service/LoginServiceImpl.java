@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.healthgov.dto.AuditLogDto;
 
-import com.healthgov.model.User;
+import com.healthgov.model.Users;
 import com.healthgov.repository.LoginRepo;
 
 
@@ -26,7 +26,7 @@ public class LoginServiceImpl implements UserDetailsService {
 	
 	public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
 
-		User user = loginRepo.findByName(name);
+		Users user = loginRepo.findByName(name);
 		if (user == null) {
 			throw new UsernameNotFoundException("User not found with username: " + name);
 		}
@@ -36,7 +36,7 @@ public class LoginServiceImpl implements UserDetailsService {
 	}
 	
 	public AuditLogDto getUserById(String name) {
-		User user = loginRepo.findByName(name);
+		Users user = loginRepo.findByName(name);
 		AuditLogDto auditLogDto = new AuditLogDto();
 		auditLogDto.setUserId(user.getUserId());
 		return auditLogDto;

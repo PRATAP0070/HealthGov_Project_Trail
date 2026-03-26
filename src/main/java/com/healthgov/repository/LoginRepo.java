@@ -2,12 +2,12 @@ package com.healthgov.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.healthgov.model.User;
+import com.healthgov.model.Users;
 
 
 
-public interface LoginRepo extends JpaRepository<User, Long>{
+public interface LoginRepo extends JpaRepository<Users, Long>{
 
-	User findByName(String name);
+	Users findByName(String name);
 
 }

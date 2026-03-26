@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.healthgov.dto.UserDto;
 import com.healthgov.exceptions.UserException;
-import com.healthgov.model.User;
+import com.healthgov.model.Users;
+import com.healthgov.enums.UserStatus;
 import com.healthgov.repository.RegistrationRepo;
 
 @Service
@@ -22,13 +23,13 @@ public class RegistrationServiceImpl implements RegistrationService {
 	@Override
 	public UserDto registerUser(UserDto userDto) throws UserException {
 		// TODO Auto-generated method stub
-		User user = new User();
+		Users user = new Users();
 		user.setName(userDto.getName());
 		user.setRole(userDto.getRole());
 		user.setEmail(userDto.getEmail());
 		user.setPhone(userDto.getPhone());
 		user.setPassword(bcryptEncoder.encode(userDto.getPassword()));
-		user.setStatus("Active");
+		user.setStatus(UserStatus.ACTIVE);
 		
 		userRepo.save(user);
 		
